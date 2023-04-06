@@ -1,5 +1,24 @@
-# Estudos Redux
-Repositório criando com a finalidade de aprender sobre [Redux](https://redux.js.org/introduction/getting-started) (container de estado previsível para aplicativos JavaScript)
+# Counter
+um contador que tem duas *[`actions`](https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow#actions)* que controlam o seu *state*:
 
-Ele ajuda você a escrever aplicativos que se comportam de forma consistente, executados em diferentes ambientes (cliente, servidor e nativo) e são fáceis de testar. Além disso, oferece uma ótima experiência de desenvolvedor, como: *live code editing combined with a time traveling debugger*.
+`increment` e `decrement`
+```js
+export const countSlice = createSlice ({
+    initialState,
+    name: 'counter',
+    reducers: {
+        increment: (state)=> {
+            state.value += 1
+        },
+        decrement: (state)=> {
+            state.value -= 1
+        },
+    }
+});
 
+```
+
+Sendo o `increment` para adicionar mais 1 na contagem e o `decrement`, para diminuir 1 na contagem.
+
+
+[`Código base`](https://redux.js.org/introduction/getting-started)
